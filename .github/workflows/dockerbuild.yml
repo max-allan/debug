@@ -40,7 +40,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: type=ref,event=push
+          tags: "type=ref,event=push"
           # labels: ${{ steps.meta.outputs.labels }}
 
       - name: Generate artifact attestation
