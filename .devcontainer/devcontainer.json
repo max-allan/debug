@@ -8,7 +8,7 @@
     "source=kube,target=/home/vscode/.kube,type=volume"
   ],
   // don't let VSCode override the CMD in our Dockerfile
-  "overrideCommand": false,
+//   "overrideCommand": false,
   "runArgs": [
     // needed to enable debugging C/C++/golang programs
     "--cap-add=SYS_PTRACE",
