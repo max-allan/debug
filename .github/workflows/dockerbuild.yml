@@ -17,6 +17,11 @@ jobs:
     name: Build Docker Images
     # Runner to use
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      attestations: write
+      id-token: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
