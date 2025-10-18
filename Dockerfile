@@ -3,6 +3,6 @@ FROM chainguard/wolfi-base
 # ARG TARGETARCH 
 ADD --chmod=755 --chown=root https://dl.enforce.dev/chainctl/latest/chainctl_linux_x86_64 /usr/local/bin/chainctl
 RUN apk update
-RUN apk add helm docker docker-dind docker-credential-ecr-login aws-cli \
-    kubectl-latest git git-lfs gitsign make terraform curl coreutils
+RUN apk add helm docker docker-dind dockerd-oci-entrypoint dockerd docker-credential-ecr-login aws-cli \
+    kubectl-latest git git-lfs gitsign make terraform curl coreutils mount
 
