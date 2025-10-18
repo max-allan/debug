@@ -35,7 +35,7 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
       - name: showtag
-        run: echo ${{join(steps.meta.outputs.*, '\n')}}
+        run: echo "${{join(steps.meta.outputs.tags, '+')}}"
 
       - name: Build and push Docker image
         id: push
