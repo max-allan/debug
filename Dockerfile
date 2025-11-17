@@ -8,7 +8,7 @@ RUN apk add helm docker docker-dind dockerd-oci-entrypoint dockerd docker-creden
 
 RUN curl -s https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | bash
 RUN mkdir -p /root/.ssh
-COPY <EOF /root/.ssh/authorized_keys
+COPY <<EOF /root/.ssh/authorized_keys
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJX8df1Cc6jeumgm6vGhksOya15IWaEBb2VxNFh2K+15
 EOF
 echo "max-csi /data fuse.s3fs _netdev,allow_other,nofail 0 0" >> /etc/fstab
