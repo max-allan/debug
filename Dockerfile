@@ -11,6 +11,6 @@ RUN mkdir -p /root/.ssh
 COPY <<EOF /root/.ssh/authorized_keys
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJX8df1Cc6jeumgm6vGhksOya15IWaEBb2VxNFh2K+15
 EOF
-echo "max-csi /data fuse.s3fs _netdev,allow_other,nofail 0 0" >> /etc/fstab
+RUN echo "max-csi /data fuse.s3fs _netdev,allow_other,nofail 0 0" >> /etc/fstab
 
 ENTRYPOINT ["sleep", "infinity"]
