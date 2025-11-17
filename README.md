@@ -46,7 +46,7 @@ Create an ECS task with one container.
 Use the role you created as task role, 4gb ram
 Add container port 22, app protocol:none
 
-image uri: ghcr.io/your-name/your-fork
+image uri: ghcr.io/your-name/your-fork:main
 
 Create a cluster.
 Create a service, 
