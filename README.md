@@ -2,6 +2,14 @@
 
 A collection of useful tools
 
+## docker
+If you want the docker daemon:
+```
+dockerd --host=unix:///var/run/docker.sock > /var/log/docker.log 2>&1 &
+```
+
+## ssh and s3fs
+
 If you want to use it, change the ssh key and bucket name.
 
 Create an ECS role for "Elastic container service task" with permissions to read/write to your s3 bucket.
